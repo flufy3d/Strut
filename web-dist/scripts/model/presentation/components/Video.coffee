@@ -34,6 +34,11 @@ define(["./Component", "common/FileUtils"],
 			srcType: () -> 'yt'
 		}
 		{
+			type: 'youku'
+			reg: /youku\.com\/v_show\/id_(.*?)(\.)/
+			srcType: () -> 'yk'
+		}
+		{
 			type: 'html5'
 			reg: /(.*)/
 			srcType: (src) -> FileUtils.type(FileUtils.extension(src))

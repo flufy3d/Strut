@@ -1,7 +1,7 @@
 # BG UPDATED (undefined, #undefined)
 CACHE MANIFEST
 
-# Time: Fri Nov 30 2012 15:59:40 GMT+0800 (ÖÐ¹ú±ê×¼Ê±¼ä)
+# Time: Fri Nov 30 2012 18:02:30 GMT+0800 (ÖÐ¹ú±ê×¼Ê±¼ä)
 # This manifest was created by confess.js, http://github.com/jamesgpearce/confess
 #
 # Retrieved URL: http://localhost:3501/
@@ -45,8 +45,8 @@ http://localhost:3501/components/etch/images/editor_icons.png
 http://localhost:3501/components/gradient_picker/circle_remove.png
 img/strut-logo-32-light.png
 preview_export/css/web-fonts.css
+scripts/4cc4f851.amd-app.js
 scripts/built.css
-scripts/e502dd8b.amd-app.js
 styles/a053a1f3.close-btn.css
 styles/d2b87232.main.css
 styles/editor/ComponentView.css

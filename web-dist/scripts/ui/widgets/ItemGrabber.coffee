@@ -73,7 +73,7 @@ define(["backbone",
 			@item = @$el.find(@options.tag)[0]
 
 			if (@options.tag == "video")
-				@$el.find(".modal-body").prepend("<div class='alert alert-success'>Supports <strong>webm & YouTube</strong>.<br/>Try out: http://www.youtube.com/watch?v=vHUsdkmr-SM</div>")
+				@$el.find(".modal-body").prepend("<div class='alert alert-success'>Supports <strong>webm & YouTube & YouKu</strong>.<br/>Try out: http://www.youtube.com/watch?v=vHUsdkmr-SM</div>")
 
 			if !@options.ignoreErrors
 				@item.onerror = => @_itemLoadError()
