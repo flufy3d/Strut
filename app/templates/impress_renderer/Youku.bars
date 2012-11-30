@@ -1,0 +1,4 @@
+{{> SVGContainer}}
+<object width="640" height="480" type="application/x-shockwave-flash" data="http://static.youku.com/v1.0.0289/v/swf/loader.swf"  id="movie_player"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="flashvars" value="VideoIDS={{shortSrc}}&amp;isAutoPlay=true"><param name="movie" value="http://static.youku.com/v1.0.0289/v/swf/loader.swf"><embed src="http://static.youku.com/v1.0.0289/v/swf/loader.swf" type="application/x-shockwave-flash" allowfullscreen="true" width="{{scale.width}}" height="{{scale.height}}"></object>
+</div>
+</div>

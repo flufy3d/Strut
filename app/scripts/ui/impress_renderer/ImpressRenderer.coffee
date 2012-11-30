@@ -17,6 +17,9 @@ define(["libs/Handlebars",
 					when "Video"
 						if componentModel.get("videoType") is "html5"
 							result = JST["impress_renderer/Video"](componentModel.attributes)
+						else if componentModel.get("videoType") is "youku"
+							console.log componentModel.attributes
+							result = JST["impress_renderer/Youku"](componentModel.attributes)
 						else
 							result = JST["impress_renderer/Youtube"](componentModel.attributes)
 					when "WebFrame"

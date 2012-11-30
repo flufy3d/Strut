@@ -56,10 +56,36 @@ define(["./ComponentView", './Mixers'],
 
 			@$el
 	)
+	Youku = ComponentView.extend(
+		className: 'component videoView'
+		initialize: () ->
+			ComponentView.prototype.initialize.apply(@, arguments)
+			@scale = Mixers.scaleObjectEmbed
+
+		render: () ->
+			ComponentView.prototype.render.call(@)
+
+
+			object = '<object width="425" height="334" type="application/x-shockwave-flash" data="http://static.youku.com/v1.0.0289/v/swf/loader.swf" id="movie_player"><param name="allowFullScreen" value="true"><param name="allowscriptaccess" value="always"><param name="flashvars" value="VideoIDS=' + @model.get('shortSrc') + '&amp;isAutoPlay=false"><param name="movie" value="http://static.youku.com/v1.0.0289/v/swf/loader.swf"></object>'
+
+			@$object = $(object)
+			@$embed = @$object.find('embed')
+
+
+			scale = @model.get("scale")
+			if scale and scale.width
+				@$object.attr(scale)
+				@$embed.attr(scale)
+
+			@$el.find('.content').append(@$object) #.append('<div class="overlay"></div>')
+
+			@$el
+	)
 
 	types = 
 		html5: Html5
 		youtube: Youtube
+		youku: Youku
 
 	result =
 		create: (params) ->

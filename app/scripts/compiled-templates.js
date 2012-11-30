@@ -686,9 +686,9 @@ this["JST"]["impress_renderer/Video"] = function (Handlebars,depth0,helpers,part
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.src; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   buffer += escapeExpression(stack1) + "\" type=\"";
-  foundHelper = helpers.videoType;
+  foundHelper = helpers.srcType;
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
-  else { stack1 = depth0.videoType; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  else { stack1 = depth0.srcType; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   buffer += escapeExpression(stack1) + "\"></source>\r\n</video>\r\n</div>\r\n</div>";
   return buffer;};
 
@@ -705,6 +705,48 @@ this["JST"]["impress_renderer/WebFrame"] = function (Handlebars,depth0,helpers,p
   if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
   else { stack1 = depth0.src; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
   buffer += escapeExpression(stack1) + "\"></iframe>\r\n</div>\r\n</div>";
+  return buffer;};
+
+this["JST"]["impress_renderer/Youku"] = function (Handlebars,depth0,helpers,partials,data) {
+  helpers = helpers || Handlebars.helpers; partials = partials || Handlebars.partials;
+  var buffer = "", stack1, foundHelper, self=this, functionType="function", escapeExpression=this.escapeExpression;
+
+
+  stack1 = depth0;
+  stack1 = self.invokePartial(partials.SVGContainer, 'SVGContainer', stack1, helpers, partials);;
+  if(stack1 || stack1 === 0) { buffer += stack1; }
+  buffer += "\r\n<object type=\"application/x-shockwave-flash\" data=\"http://static.youku.com/v1.0.0289/v/swf/loader.swf\" width=\"";
+  stack1 = depth0.scale;
+  stack1 = stack1 == null || stack1 === false ? stack1 : stack1.width;
+  stack1 = typeof stack1 === functionType ? stack1() : stack1;
+  buffer += escapeExpression(stack1) + "\" height=\"";
+  stack1 = depth0.scale;
+  stack1 = stack1 == null || stack1 === false ? stack1 : stack1.height;
+  stack1 = typeof stack1 === functionType ? stack1() : stack1;
+  buffer += escapeExpression(stack1) + "\" id=\"movie_player\"><param name=\"allowFullScreen\" value=\"true\"><param name=\"allowscriptaccess\" value=\"always\"><param name=\"flashvars\" value=\"VideoIDS=";
+  foundHelper = helpers.shortSrc;
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0.shortSrc; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  buffer += escapeExpression(stack1) + "&amp;isAutoPlay=true\"><param name=\"movie\" value=\"http://static.youku.com/v1.0.0289/v/swf/loader.swf\"></object>\r\n</div>\r\n</div>\r\n";
+  return buffer;};
+
+this["JST"]["impress_renderer/YoukuContainer"] = function (Handlebars,depth0,helpers,partials,data) {
+  helpers = helpers || Handlebars.helpers; partials = partials || Handlebars.partials;
+  var buffer = "", stack1, foundHelper, functionType="function", escapeExpression=this.escapeExpression, self=this;
+
+
+  buffer += "<div class=\"componentContainer\" style=\"top: ";
+  foundHelper = helpers['y'];
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0['y']; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  buffer += escapeExpression(stack1) + "px; left: ";
+  foundHelper = helpers['x'];
+  if (foundHelper) { stack1 = foundHelper.call(depth0, {hash:{}}); }
+  else { stack1 = depth0['x']; stack1 = typeof stack1 === functionType ? stack1() : stack1; }
+  buffer += escapeExpression(stack1) + "px;\">\r\n";
+  stack1 = depth0;
+  stack1 = self.invokePartial(partials.TransformContainer, 'TransformContainer', stack1, helpers, partials);;
+  if(stack1 || stack1 === 0) { buffer += stack1; }
   return buffer;};
 
 this["JST"]["impress_renderer/Youtube"] = function (Handlebars,depth0,helpers,partials,data) {
